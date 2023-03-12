@@ -4,11 +4,17 @@ namespace CalculatorCollab.BLL.Utils
 {
    public class NumberValidation
 {
+    ///<summary>
+    ///Checks if a number is an even number.
+    ///</summary>
     public static bool IsEven(int number){
         if(number % 2 == 0) return true;
         return false;
     }
 
+///<summary>
+///Checks if a string is convertible to number (decimal; for high number inputs)
+///</summary>
   public static bool IsNumber(string number){
 bool isNumber = decimal.TryParse(number, out number);
 
@@ -16,6 +22,9 @@ if (isNumber) return true;
 return false;
     }
 
+///<summary>
+///This method checks if the passed number is zero. with default error msg.
+///</summary>
      public static (bool isZero, string msg) DivideByZeroHandler(int number){
         bool isValidNum = IsNumber(number);
         if(isValidNum){
