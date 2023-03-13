@@ -1,4 +1,5 @@
-namespace CalculatorCollab.BLL.Utils{
+namespace CalculatorCollab.BLL.Utils
+{
     public class Operation
     {
         ///<summary>
@@ -10,6 +11,8 @@ namespace CalculatorCollab.BLL.Utils{
 
             if(userAnswer == "NO") return (false, $"{answer}");
 
+            if(userAnswer != "YES" || userAnswer != "NO") return (false, $"{answer} is not a valid choice.");
+            return (false, "Error occured.");
             if(!userAnswer == "YES" || "NO") return (false, $"{answer} is not a valid choice.");
         } 
     }
