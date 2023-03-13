@@ -11,7 +11,7 @@ public class Calculator : ICalculator
 
     public async Task<int> DivideAsync(int number, int divisor)
     {
-        throw new NotImplementedException();
+        return number / divisor;
     }
 
     public async Task<int> ExponentialAsync(int number, int power)
@@ -32,6 +32,6 @@ public class Calculator : ICalculator
 
     public async Task<int> SubtractAsync(int a, int b)
     {
-        throw new NotImplementedException();
+        return a - b;
     }
 }
