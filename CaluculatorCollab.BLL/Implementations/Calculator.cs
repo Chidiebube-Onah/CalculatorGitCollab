@@ -21,7 +21,7 @@ public class Calculator : ICalculator
 
     public async Task<int> ModuloAsync(int number, int mod)
     {
-        return number % mod;
+        return number % mod; 
     }
 
     public async Task<int> MultiplyAsync(int a, int b)
